@@ -1,0 +1,21 @@
+1- solana-keygen grind --starts-with hap:1    (For finding/creating a pubkey of token with letters hap)
+
+Keypair created- hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm.json
+
+
+2- spl-token create-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb \
+ --enable-metadata hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm.json
+
+Token Created - hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm
+
+3- Upload the image and metadata.json to IPFS
+
+4- spl-token initialize-metadata hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm \
+  'Happy Token' 'HPT' \
+  'https://bafybeic3ozgj3un7abkgeuitqcufcyl7djbb2xa2kqurwq2gqrc7n6gbvm.ipfs.w3s.link/metadata.json'
+
+5- spl-token create-account hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm   (For holding tokens)
+
+6- spl-token mint hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm 1000
+
+7- spl-token transfer hap1JyZAtkErQpoqJ2tjcq9NC69TgTaGn943GuewRFm 10 B4AiWh8oV3pb2V4jf8bm7Mu2VJ5HmDibxvgYBH3uBBYD --fund-recipient
